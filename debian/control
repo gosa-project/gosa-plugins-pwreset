@@ -1,0 +1,26 @@
+Source: gosa-plugin-pwreset
+Section: web
+Priority: optional
+Maintainer: Debian Edu Packaging Team <debian-edu-pkg-team@lists.alioth.debian.org>
+Uploaders:
+ Mike Gabriel <sunweaver@debian.org>,
+Build-Depends:
+ debhelper (>= 9),
+ cdbs,
+Standards-Version: 3.9.6
+Homepage: https://wiki.it-zukunft-schule.de/Entwicklung/GOsaPluginPwreset
+Vcs-Git: git://anonscm.debian.org/debian-edu/pkg-team/gosa-plugin-pwreset.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-edu/pkg-team/gosa-plugin-pwreset.git
+
+Package: gosa-plugin-pwreset
+Architecture: all
+Depends: 
+ ${misc:Depends},
+ gosa (>= 2.7.4+reloaded2-4~),
+Description: Password Management Add-On for GOsa²
+ Password management and reset tool for GOsa². Mass reset user passwords
+ based on various search patterns. New passwords can be auto-generated (with
+ PDF or CSV export) or uploaded in CSV format.
+ .
+ GOsa² is a combination of system-administrator and end-user web
+ interface, designed to handle LDAP based setups.

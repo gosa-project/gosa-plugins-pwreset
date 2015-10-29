@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-29 10:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: addons/pwreset/class_pwreset.inc:25
+msgid "Password Management"
+msgstr ""
+
+#: addons/pwreset/class_pwreset.inc:26 addons/pwreset/class_pwreset.inc:59
+#: addons/pwreset/class_pwreset.inc:65 addons/pwreset/class_managepws.inc:25
+msgid "Password Management Add-On"
+msgstr ""
+
+#: addons/pwreset/class_pwreset.inc:60
+msgid "Facilitate mass password resets"
+msgstr ""
+
+#: addons/pwreset/content_managepws.tpl:2
+msgid "GOsa2 Password Management Add-On has not been implemented, yet."
+msgstr ""
+
+#: addons/pwreset/class_managepws.inc:26
+msgid "GOsa2 Password Management Add-On"
+msgstr ""

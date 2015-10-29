@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gosa-plugin-schoolmanager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-29 10:46+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: addons/pwreset/class_pwreset.inc:25
+msgid "Password Management"
+msgstr "Kennwortverwaltung"
+
+#: addons/pwreset/class_pwreset.inc:26 addons/pwreset/class_pwreset.inc:59
+#: addons/pwreset/class_pwreset.inc:65 addons/pwreset/class_managepws.inc:25
+msgid "Password Management Add-On"
+msgstr "Add-On zur Kennwortverwaltung"
+
+#: addons/pwreset/class_pwreset.inc:60
+msgid "Facilitate mass password resets"
+msgstr "Ermöglicht das Zurücksetzen von Kennwörtern für mehrere Benutzer"
+
+#: addons/pwreset/content_managepws.tpl:2
+msgid "GOsa2 Password Management Add-On has not been implemented, yet."
+msgstr "GOsa² Add-On zur Kennwortverwaltung wurde noch nicht implementiert."
+
+#: addons/pwreset/class_managepws.inc:26
+msgid "GOsa2 Password Management Add-On"
+msgstr "GOsa² Add-On zur Kennwortverwaltung"

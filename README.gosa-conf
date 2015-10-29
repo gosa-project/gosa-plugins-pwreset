@@ -1,0 +1,31 @@
+Install Instructions.
+--------------------
+
+Apart from installing this package, you have to add the below config
+section to /etc/gosa/gosa.conf:
+
+"""
+diff --git a/etc/gosa/gosa.conf b/etc/gosa/gosa.conf
+index cabe925..2bbc920 100644
+--- a/gosa/gosa.conf
++++ b/gosa/gosa.conf
+@@ -63,6 +63,7 @@
+       <plugin acl="users/viewFonEntries:self,users/viewFonEntries" class="fonreport"/>
+       <plugin acl="ldapmanager" class="ldif"/>
+       <plugin acl="schoolmanager" class="schoolmgr"/>
++      <plugin acl="pwreset" class="pwreset"/>
+     </section>
+   </menu>
+ 
+@@ -290,6 +291,10 @@
+     <tab class="managecourses" name="Manage Courses" />
+   </schoolmanagertab>
+ 
++  <pwresettab>
++    <tab class="managepws" name="Reset Passwords" />
++  </pwresettab>
++
+   <faipartitiontabs>
+     <tab class="faiPartitionTable" name="Partitions"/>
+   </faipartitiontabs>
+"""

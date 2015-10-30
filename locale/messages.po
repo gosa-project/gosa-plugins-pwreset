@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-30 11:43+0100\n"
+"POT-Creation-Date: 2015-10-30 13:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,6 +96,30 @@ msgstr ""
 msgid "Review planned password reset operations"
 msgstr ""
 
+#: addons/pwreset/content_managepws.tpl:81
+msgid "Really?"
+msgstr ""
+
+#: addons/pwreset/content_managepws.tpl:82
+#: addons/pwreset/content_managepws.tpl:125
+msgid "User Id"
+msgstr ""
+
+#: addons/pwreset/content_managepws.tpl:83
+#: addons/pwreset/content_managepws.tpl:126
+msgid "Fullname"
+msgstr ""
+
+#: addons/pwreset/content_managepws.tpl:84
+#: addons/pwreset/content_managepws.tpl:127
+msgid "New Password"
+msgstr ""
+
+#: addons/pwreset/content_managepws.tpl:85
+#: addons/pwreset/content_managepws.tpl:128
+msgid "LDAP DN"
+msgstr ""
+
 #: addons/pwreset/content_managepws.tpl:109
 msgid "No accounts have been found in this part of the LDAP tree."
 msgstr ""
@@ -113,6 +137,10 @@ msgstr ""
 
 #: addons/pwreset/content_managepws.tpl:122
 msgid "Password reset operation status report"
+msgstr ""
+
+#: addons/pwreset/content_managepws.tpl:124
+msgid "Status"
 msgstr ""
 
 #: addons/pwreset/content_managepws.tpl:134

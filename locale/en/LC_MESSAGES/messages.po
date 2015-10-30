@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gosa-plugin-schoolmanager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-30 11:43+0100\n"
+"POT-Creation-Date: 2015-10-30 13:03+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>\n"
 "Language-Team: \n"
@@ -98,6 +98,30 @@ msgstr ""
 msgid "Review planned password reset operations"
 msgstr "Review planned password reset operations"
 
+#: addons/pwreset/content_managepws.tpl:81
+msgid "Really?"
+msgstr "Really?"
+
+#: addons/pwreset/content_managepws.tpl:82
+#: addons/pwreset/content_managepws.tpl:125
+msgid "User Id"
+msgstr "User Id"
+
+#: addons/pwreset/content_managepws.tpl:83
+#: addons/pwreset/content_managepws.tpl:126
+msgid "Fullname"
+msgstr "Fullname"
+
+#: addons/pwreset/content_managepws.tpl:84
+#: addons/pwreset/content_managepws.tpl:127
+msgid "New Password"
+msgstr "New Password"
+
+#: addons/pwreset/content_managepws.tpl:85
+#: addons/pwreset/content_managepws.tpl:128
+msgid "LDAP DN"
+msgstr "LDAP DN"
+
 #: addons/pwreset/content_managepws.tpl:109
 msgid "No accounts have been found in this part of the LDAP tree."
 msgstr "No accounts have been found in this part of the LDAP tree."
@@ -119,6 +143,10 @@ msgstr ""
 #: addons/pwreset/content_managepws.tpl:122
 msgid "Password reset operation status report"
 msgstr "Password reset operation status report"
+
+#: addons/pwreset/content_managepws.tpl:124
+msgid "Status"
+msgstr "Status"
 
 #: addons/pwreset/content_managepws.tpl:134
 msgid "ok"

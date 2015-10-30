@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gosa-plugin-schoolmanager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-30 11:43+0100\n"
+"POT-Creation-Date: 2015-10-30 13:03+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>\n"
 "Language-Team: \n"
@@ -42,8 +42,7 @@ msgstr "Optionen der Kennwortverwaltung konfigurieren"
 #: addons/pwreset/content_managepws.tpl:11
 msgid "Please configure options for this run of resetting user credentials."
 msgstr ""
-"Bitte die Optionen für diesen Lauf der Kennwortrücksetzung "
-"konfigurieren."
+"Bitte die Optionen für diesen Lauf der Kennwortrücksetzung konfigurieren."
 
 #: addons/pwreset/content_managepws.tpl:15
 msgid "Configure planned password reset operations"
@@ -94,13 +93,37 @@ msgid ""
 "Please review outstanding password reset operations. If individual users "
 "should be skipped from this password reset operation, deselect them below."
 msgstr ""
-"Bitte ausstehende Kennwortrücksetzungen überprüfen. Falls einzelne "
-"Benutzer von der Kennwortrücksetzung ausgenommen werden sollen, können "
-"diese weiter unten demarkiert werden."
+"Bitte ausstehende Kennwortrücksetzungen überprüfen. Falls einzelne Benutzer "
+"von der Kennwortrücksetzung ausgenommen werden sollen, können diese weiter "
+"unten demarkiert werden."
 
 #: addons/pwreset/content_managepws.tpl:79
 msgid "Review planned password reset operations"
 msgstr "Geplante Kennwortrücksetzungen prüfen"
+
+#: addons/pwreset/content_managepws.tpl:81
+msgid "Really?"
+msgstr "Wirklich?"
+
+#: addons/pwreset/content_managepws.tpl:82
+#: addons/pwreset/content_managepws.tpl:125
+msgid "User Id"
+msgstr "Benutzerkennung"
+
+#: addons/pwreset/content_managepws.tpl:83
+#: addons/pwreset/content_managepws.tpl:126
+msgid "Fullname"
+msgstr "Vollständiger Name"
+
+#: addons/pwreset/content_managepws.tpl:84
+#: addons/pwreset/content_managepws.tpl:127
+msgid "New Password"
+msgstr "Neues Kennwort"
+
+#: addons/pwreset/content_managepws.tpl:85
+#: addons/pwreset/content_managepws.tpl:128
+msgid "LDAP DN"
+msgstr "LDAP-DN"
 
 #: addons/pwreset/content_managepws.tpl:109
 msgid "No accounts have been found in this part of the LDAP tree."
@@ -119,13 +142,17 @@ msgid ""
 "application (e.g., LibreOffice Calc)."
 msgstr ""
 "Weiter unten befindet sich ein Statusbericht für die einzelnen "
-"Kennwortrücksetzungen. Die Tabelle mit Zugangsdaten kann mittels "
-"Kopieren-und-Einfügen in eine Tabellenkalkulation übertragen werden (z.Bsp. "
+"Kennwortrücksetzungen. Die Tabelle mit Zugangsdaten kann mittels Kopieren-"
+"und-Einfügen in eine Tabellenkalkulation übertragen werden (z.Bsp. "
 "LibreOffice Calc)."
 
 #: addons/pwreset/content_managepws.tpl:122
 msgid "Password reset operation status report"
 msgstr "Statusbericht der Kennwortrücksetzung"
+
+#: addons/pwreset/content_managepws.tpl:124
+msgid "Status"
+msgstr "Status"
 
 #: addons/pwreset/content_managepws.tpl:134
 msgid "ok"

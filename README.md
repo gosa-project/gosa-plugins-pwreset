@@ -1,4 +1,4 @@
-# Description: Password Management Add-On for GOsa²
+# Password Management Add-On for GOsa²
 
 Password management and reset tool for GOsa². Administratively
 mass-reset user passwords based on various approaches. New

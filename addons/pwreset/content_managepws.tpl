@@ -16,44 +16,52 @@
         <tr><td colspan="3" style="height:0.3em;"></td></tr>
         <tr>
             <td colspan="3">
-                    <input {if $preset_pwreset_mode==0} checked {/if} type='radio' name='pwreset_mode' value='0'>{t}Upload a credentials file (CSV format){/t} (no implemented, yet)
+                    <input {if $preset_pwreset_mode==0} checked {/if} type='radio' name='pwreset_mode' value='0'>{t}Upload a credentials file (CSV format).{/t} (no implemented, yet)
                     <br>
             </td>
         </tr>
         <tr><td colspan="3" style="height:0.3em;"></td></tr>
         <tr><td></td><td colspan="2"><b>{t}File format:{/t}</b> {t}CSV, comma-separated, no quotes, two columns:{/t} <tt>&lt;uid&gt;,&lt;userPassword&gt;<tt></td></tr>
         <tr>
-                <td style="width: 1em;">&nbsp;</td>
-                <td style="vertical-align: top;">
+                <td style="width: 6ex;">&nbsp;</td>
+                <td style="vertical-align: middle;">
                     <LABEL for="credfile">{t}Select CSV file credential data to upload:{/t}</LABEL>
                 </td>
                 <td style="vertical-align: middle;">
                         <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
                         <input id="credfile" name="credfile" type="file" value="{t}Browse{/t}">
-                <br>
-                <div style="padding-top: 0.5em;">(Only needed for credential import via CSV file).</div>
                 </td>
         </tr>
         <tr><td colspan="3" style="height:0.8em;"></td></tr>
         <tr>
                 <td colspan="3">
-                    <input {if $preset_pwreset_mode==1} checked {/if} type='radio' name='pwreset_mode' value='1'>{t}Reset passwords of account in a certain OU{/t} (not implemented, yet)
+                    <input {if $preset_pwreset_mode==1} checked {/if} type='radio' name='pwreset_mode' value='1'>{t}Reset passwords of accounts in a certain organizational unit of the LDAP tree.{/t} (not implemented, yet)
                     <br>
                 </td>
         </tr>
         <tr><td colspan="3" style="height:0.3em;"></td></tr>
         <tr>
-                <td style="width: 1em;">&nbsp;</td>
+                <td style="width: 6ex;">&nbsp;</td>
                 <td style="vertical-align: middle;">
-                        <LABEL for="ou_groups">{t}Select OU for new groups:{/t}</LABEL>
+                        <LABEL for="subtree_ou_id">{t}Change passwords for account in this OU subtree :{/t}</LABEL>
                 </td>
                 <td style="vertical-align: middle;">
-                        <select id="ou_groups" name="ou_groups" size="1" title="">
-                        {html_options options=$ous_available selected=$preset_ou_groups}
+                        <select id="subtree_ou_id" name="subtree_ou_id" size="1" title="">
+                        {html_options options=$ous_available selected=$preset_subtree_ou_id}
                         </select>
                 </td>
         </tr>
-
+        <tr>
+                <td style="width: 6ex;">&nbsp;</td>
+                <td style="vertical-align: middle;">
+                        <LABEL for="pwlength">{t}Length of auto-generated passwords:{/t}</LABEL>
+                </td>
+                <td style="vertical-align: middle;">
+                        <select id="pwlength" name="pwlength" size="1" title="">
+                        {html_options options=range(8,32) selected=$preset_pwlength-8}
+                        </select>
+                </td>
+        </tr>
 </table>
 
 {elseif $pwreset_reviewed != TRUE}
@@ -61,16 +69,83 @@
 
 <br><h3>{t}Review password resets{/t}</h3>
 
+{if (!empty($accounts))}
 <p>
-{t}Review outstanding password reset operations and deselect individual users.{/t}
+{t}Review outstanding password reset operations. If individual users should be skipped from this password reset operation, deselect them below.{/t}
 </p>
 
 <hr>
 
 <table summary="{t}Review planned password reset operations{/t}">
         <tr>
-        <td>FIXME: more work to do...</td>
+            <th bgcolor="#BBBBBB">Really?</th>
+            <th bgcolor="#BBBBBB">User Id</th>
+            <th bgcolor="#BBBBBB">Fullname</th>
+            <th bgcolor="#BBBBBB">New Password</th>
+            <th bgcolor="#BBBBBB">LDAP DN</th>
         </tr>
+{foreach from=$accounts item=val key=key}
+        <tr>
+        <td style="text-align: center; vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            <input value="{$key}" {if $accounts[$key]['checked'] && $accounts[$key]['valid']}checked{/if} {if (!$accounts[$key]['valid'])}disabled{/if} type='checkbox' name='accounts[]' id='account_{$key}'>
+        </td>
+        <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            {$accounts[$key]['uid']}
+        </td>
+        <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            {$accounts[$key]['cn']}
+        </td>
+        <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            <input style="font-family:monospace;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if (!$accounts[$key]['valid'])}disabled{/if} type="text" value="{$accounts[$key]['userPassword']}">
+        </td>
+        <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            {$accounts[$key]['dn']}
+        </td>
+        </tr>
+{/foreach}
+</table>
+{else}
+<p>
+{t}No accounts have been found in this part of the LDAP tree.{/t}
+</p>
+{/if}
+{else}
+
+<br><h3>{t}Password reset operation has been accomplished{/t}</h3>
+
+<p>
+{t}Below you find a status report for this password reset operation.{/t}
+</p>
+
+<hr>
+
+<table summary="{t}Password reset operation status report{/t}">
+        <tr>
+            <th bgcolor="#BBBBBB">Status</th>
+            <th bgcolor="#BBBBBB">User Id</th>
+            <th bgcolor="#BBBBBB">Fullname</th>
+            <th bgcolor="#BBBBBB">New Password</th>
+            <th bgcolor="#BBBBBB">LDAP DN</th>
+        </tr>
+{foreach from=$accounts item=account key=key}
+        <tr>
+        <td style="text-align: center; vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            {$accounts[$key]['status']}
+        </td>
+        <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            {$accounts[$key]['uid']}
+        </td>
+        <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            {$accounts[$key]['cn']}
+        </td>
+        <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            <tt>{$accounts[$key]['userPassword']}</tt>
+        </td>
+        <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+            {$accounts[$key]['dn']}
+        </td>
+        </tr>
+{/foreach}
 </table>
 {/if}
 
@@ -80,7 +155,12 @@
         {if $pwreset_configured != TRUE}
         <input name="btn_pwreset_configured" value="{t}Review upcoming password resets{/t}" type ="submit">
         {elseif $pwreset_reviewed != TRUE}
+        {if (!empty($accounts))}
         <input name="btn_pwreset_reviewed" value="{t}Reset passwords of selected accounts{/t}" type ="submit">
+        {else}
+        <input type="hidden" name="phase_00">
+        <input name="btn_pwreset_back" value="{t}Back{/t}" type ="submit">
+        {/if}
         {/if}
 </div>
 

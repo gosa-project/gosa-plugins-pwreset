@@ -1,6 +1,27 @@
-2015-10-30 11:59:53 +0100 Mike Gabriel (59a11f3)
+2015-10-30 13:39:39 +0100 Mike Gabriel (c9b7b7f)
 
-	* release 0.99.0 (HEAD, master)
+	* release 0.99.1 (HEAD, master)
+
+2015-10-30 13:39:02 +0100 Mike Gabriel (f8642e0)
+
+	* Read-in on-screen modifications of new user passwords.
+
+2015-10-30 13:05:23 +0100 Mike Gabriel (e6d43f0)
+
+	* update i18n files (now with translated table heads) (origin/master,
+          gh/master)
+
+2015-10-30 13:05:07 +0100 Mike Gabriel (364128b)
+
+	* Make table heads translatable.
+
+2015-10-30 13:02:32 +0100 Mike Gabriel (9afa202)
+
+	* Various i18n fixes for the German (de) translation file.
+
+2015-10-30 11:59:53 +0100 Mike Gabriel (433f2b4)
+
+	* release 0.99.0 (tag: 0.99.0)
 
 2015-10-30 11:54:01 +0100 Mike Gabriel (a1f6adf)
 

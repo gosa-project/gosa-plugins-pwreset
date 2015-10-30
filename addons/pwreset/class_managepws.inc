@@ -335,9 +335,14 @@ class managepws extends plugin
             foreach($this->accounts as $key => $account) {
                 if($account['valid'] && $account['checked']) {
 
-                    // FIXME: this is a dummy status... we actually need to change passwords here...
+                    if(!change_password($account['dn'],$account['userPassword'],FALSE,'','', $message)) {
+                        msg_dialog::displayChecks(array($message));
+                        $this->accounts[$key]['status'] = "failed";
+                    }
+                    else {
+                        $this->accounts[$key]['status'] = "ok";
+                    }
 
-                    $this->accounts[$key]['status'] = "ok";
                 }
                 elseif(!$account['valid']) {
                     $this->accounts[$key]['status'] = "ignored";

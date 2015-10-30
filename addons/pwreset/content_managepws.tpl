@@ -130,19 +130,27 @@
 {foreach from=$accounts item=account key=key}
         <tr>
         <td style="text-align: center; vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
-            {$accounts[$key]['status']}
+{if $accounts[$key]['status']==="ok"}
+            <b color="green">{t}ok{/t}</b>
+{elseif $accounts[$key]['status']==="failed"}
+            <b color="red">{t}failed{/t}</b>
+{elseif $accounts[$key]['status']==="skipped"}
+            <i>{t}skipped{/t}</i>
+{elseif $accounts[$key]['status']==="ignored"}
+            <div style="color:#A0A0A0;">{t}ignored{/t}</div>
+{/if}
         </td>
-        <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+        <td style="vertical-align:middle;{if (!$accounts[$key]['valid']) || (!$accounts[$key]['checked'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
             {$accounts[$key]['uid']}
         </td>
-        <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
+        <td style="vertical-align:middle;{if (!$accounts[$key]['valid']) || (!$accounts[$key]['checked'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
             {$accounts[$key]['cn']}
         </td>
         <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
-            <tt>{$accounts[$key]['userPassword']}</tt>
+            <tt {if (!$accounts[$key]['valid']) || (!$accounts[$key]['checked'])}style="color:#A0A0A0;"{/if}>{$accounts[$key]['userPassword']}</tt>
         </td>
         <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
-            {$accounts[$key]['dn']}
+            <div {if (!$accounts[$key]['checked'])}style="color:#A0A0A0;"{/if}>{$accounts[$key]['dn']}</div>
         </td>
         </tr>
 {/foreach}

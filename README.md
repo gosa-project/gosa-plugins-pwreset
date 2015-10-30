@@ -8,4 +8,4 @@ GOsa² is a combination of system-administrator and end-user web
 interface, designed to handle LDAP based setups.
 
 The  GOsa² Password Management Add-On is licensed under GPL-2+,
-for details see COPYING file.
+for details see the AUTHORS.txt and COPYING files.

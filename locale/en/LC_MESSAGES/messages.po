@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gosa-plugin-schoolmanager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-30 13:03+0100\n"
+"POT-Creation-Date: 2015-10-30 14:04+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgid "Password Management"
 msgstr "Password Management"
 
 #: addons/pwreset/class_pwreset.inc:26 addons/pwreset/class_pwreset.inc:59
-#: addons/pwreset/class_pwreset.inc:65 addons/pwreset/class_managepws.inc:25
+#: addons/pwreset/class_pwreset.inc:65
 msgid "Password Management Add-On"
 msgstr "Password Management Add-On"
 
@@ -179,6 +179,10 @@ msgstr "Back"
 #: addons/pwreset/content_managepws.tpl:174
 msgid "Restart Password Manager"
 msgstr "Restart Password Manager"
+
+#: addons/pwreset/class_managepws.inc:25
+msgid "Reset Passwords"
+msgstr "Reset Passwords"
 
 #: addons/pwreset/class_managepws.inc:26
 msgid "GOsa2 Password Management Add-On"

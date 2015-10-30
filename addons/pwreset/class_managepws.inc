@@ -22,7 +22,7 @@
 class managepws extends plugin
 {
     /* Definitions */
-    var $plHeadline= "Password Management Add-On";
+    var $plHeadline= "Reset Passwords";
     var $plDescription= "GOsa2 Password Management Add-On";
     var $access= "";
 

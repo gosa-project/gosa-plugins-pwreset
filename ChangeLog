@@ -1,0 +1,67 @@
+2015-10-30 11:59:53 +0100 Mike Gabriel (59a11f3)
+
+	* release 0.99.0 (HEAD, master)
+
+2015-10-30 11:54:01 +0100 Mike Gabriel (a1f6adf)
+
+	* Add README.gosa-compat, compatible with GOsa² 2.7.x.
+
+2015-10-30 11:53:38 +0100 Mike Gabriel (b7f1d3a)
+
+	* Add COPYING file (GPL-2+).
+
+2015-10-30 11:46:22 +0100 Mike Gabriel (9000930)
+
+	* drop debian/ folder from upstream code
+
+2015-10-30 11:44:58 +0100 Mike Gabriel (1a89c7e)
+
+	* update i18n files
+
+2015-10-30 11:16:42 +0100 Mike Gabriel (92f37d0)
+
+	* We won't provide a CSV export for now. Copy+paste into LibreOffice
+          Calc works sufficiently for now.
+
+2015-10-30 11:16:13 +0100 Mike Gabriel (d182998)
+
+	* Add a button at the bottom of the status report, allowing you to
+          restart the Password Management Add-On.
+
+2015-10-30 11:15:24 +0100 Mike Gabriel (7c82459)
+
+	* Add actual change_password() call.
+
+2015-10-30 11:14:36 +0100 Mike Gabriel (0ca9528)
+
+	* whitespace fix
+
+2015-10-30 11:14:10 +0100 Mike Gabriel (caa2f6e)
+
+	* fix color in pwreset status cells
+
+2015-10-30 02:31:14 +0100 Mike Gabriel (4c8f17d)
+
+	* rework the status page layout a bit
+
+2015-10-30 02:03:07 +0100 Mike Gabriel (348ab59)
+
+	* drive work forward, todo: actually set passwords
+
+2015-10-29 15:18:44 +0100 Mike Gabriel (6e0988e)
+
+	* get started with plugin
+
+2015-10-29 15:18:31 +0100 Mike Gabriel (3f8e540)
+
+	* whitespace cleanup
+
+2015-10-29 15:17:50 +0100 Mike Gabriel (4163e5f)
+
+	* Move README into base dir, provide needed modifications for
+          gosa.conf.
+
+2015-10-29 11:02:35 +0100 Mike Gabriel (ee3c655)
+
+	* initial commit for gosa-plugin-pwreset
+

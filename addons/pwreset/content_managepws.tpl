@@ -8,7 +8,7 @@
 <br><h3>{t}Configure password reset options{/t}</h3>
 
 <p>
-{t}Please configure options of this run of resetting credentials.{/t}
+{t}Please configure options for this run of resetting user credentials.{/t}
 </p>
 
 <hr>
@@ -16,7 +16,7 @@
         <tr><td colspan="3" style="height:0.3em;"></td></tr>
         <tr>
             <td colspan="3">
-                    <input {if $preset_pwreset_mode==0} checked {/if} type='radio' name='pwreset_mode' value='0'>{t}Upload a credentials file (CSV format).{/t} (no implemented, yet)
+                    <input {if $preset_pwreset_mode==0} checked {/if} type='radio' name='pwreset_mode' value='0'>{t}Upload a credentials file (CSV format).{/t}
                     <br>
             </td>
         </tr>
@@ -25,7 +25,7 @@
         <tr>
                 <td style="width: 6ex;">&nbsp;</td>
                 <td style="vertical-align: middle;">
-                    <LABEL for="credfile">{t}Select CSV file credential data to upload:{/t}</LABEL>
+                    <LABEL for="credfile">{t}Select CSV file for uploading:{/t}</LABEL>
                 </td>
                 <td style="vertical-align: middle;">
                         <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
@@ -35,7 +35,7 @@
         <tr><td colspan="3" style="height:0.8em;"></td></tr>
         <tr>
                 <td colspan="3">
-                    <input {if $preset_pwreset_mode==1} checked {/if} type='radio' name='pwreset_mode' value='1'>{t}Reset passwords of accounts in a certain organizational unit of the LDAP tree.{/t} (not implemented, yet)
+                    <input {if $preset_pwreset_mode==1} checked {/if} type='radio' name='pwreset_mode' value='1'>{t}Reset passwords of accounts in a certain organizational unit of the LDAP tree.{/t}
                     <br>
                 </td>
         </tr>
@@ -43,7 +43,7 @@
         <tr>
                 <td style="width: 6ex;">&nbsp;</td>
                 <td style="vertical-align: middle;">
-                        <LABEL for="subtree_ou_id">{t}Change passwords for account in this OU subtree :{/t}</LABEL>
+                        <LABEL for="subtree_ou_id">{t}Change passwords for accounts in this OU subtree:{/t}</LABEL>
                 </td>
                 <td style="vertical-align: middle;">
                         <select id="subtree_ou_id" name="subtree_ou_id" size="1" title="">
@@ -71,7 +71,7 @@
 
 {if (!empty($accounts))}
 <p>
-{t}Review outstanding password reset operations. If individual users should be skipped from this password reset operation, deselect them below.{/t}
+{t}Please review outstanding password reset operations. If individual users should be skipped from this password reset operation, deselect them below.{/t}
 </p>
 
 <hr>
@@ -111,7 +111,7 @@
 {/if}
 {else}
 
-<br><h3>{t}Password reset operation has been accomplished{/t}</h3>
+<br><h3>{t}Password reset operations have been accomplished{/t}</h3>
 
 <p>
 {t}Below you find a status report for this password reset operation. You can copy'n'paste the credentials table below into your favourite spreadsheet application (e.g., LibreOffice Calc).{/t}

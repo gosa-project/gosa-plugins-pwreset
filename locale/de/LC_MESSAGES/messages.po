@@ -21,7 +21,7 @@ msgstr "Kennwortverwaltung"
 #: addons/pwreset/class_pwreset.inc:26 addons/pwreset/class_pwreset.inc:59
 #: addons/pwreset/class_pwreset.inc:65 addons/pwreset/class_managepws.inc:25
 msgid "Password Management Add-On"
-msgstr "Add-On zur Kennwortverwaltung"
+msgstr "Addon zur Kennwortverwaltung"
 
 #: addons/pwreset/class_pwreset.inc:60
 msgid "Facilitate mass password resets"
@@ -188,7 +188,7 @@ msgstr "Kennwortverwaltung neu starten"
 
 #: addons/pwreset/class_managepws.inc:26
 msgid "GOsa2 Password Management Add-On"
-msgstr "GOsa² Add-On zur Kennwortverwaltung"
+msgstr "GOsa² Addon zur Kennwortverwaltung"
 
 #: addons/pwreset/class_managepws.inc:95
 msgid "Permission error"

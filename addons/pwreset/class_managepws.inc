@@ -345,7 +345,6 @@ class managepws extends plugin
                 else {
                     $this->accounts[$key]['status'] = "skipped";
                 }
-
             }
 
             $smarty->assign ("pwreset_reviewed",TRUE);

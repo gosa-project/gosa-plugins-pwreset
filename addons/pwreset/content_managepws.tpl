@@ -114,7 +114,7 @@
 <br><h3>{t}Password reset operation has been accomplished{/t}</h3>
 
 <p>
-{t}Below you find a status report for this password reset operation.{/t}
+{t}Below you find a status report for this password reset operation. You can copy'n'paste the credentials table below into your favourite spreadsheet application (e.g., LibreOffice Calc).{/t}
 </p>
 
 <hr>

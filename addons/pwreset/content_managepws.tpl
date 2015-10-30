@@ -78,11 +78,11 @@
 
 <table summary="{t}Review planned password reset operations{/t}">
         <tr>
-            <th bgcolor="#BBBBBB">Really?</th>
-            <th bgcolor="#BBBBBB">User Id</th>
-            <th bgcolor="#BBBBBB">Fullname</th>
-            <th bgcolor="#BBBBBB">New Password</th>
-            <th bgcolor="#BBBBBB">LDAP DN</th>
+            <th bgcolor="#BBBBBB">{t}Really?{/t}</th>
+            <th bgcolor="#BBBBBB">{t}User Id{/t}</th>
+            <th bgcolor="#BBBBBB">{t}Fullname{/t}</th>
+            <th bgcolor="#BBBBBB">{t}New Password{/t}</th>
+            <th bgcolor="#BBBBBB">{t}LDAP DN{/t}</th>
         </tr>
 {foreach from=$accounts item=val key=key}
         <tr>
@@ -121,11 +121,11 @@
 
 <table summary="{t}Password reset operation status report{/t}">
         <tr>
-            <th bgcolor="#BBBBBB">Status</th>
-            <th bgcolor="#BBBBBB">User Id</th>
-            <th bgcolor="#BBBBBB">Fullname</th>
-            <th bgcolor="#BBBBBB">New Password</th>
-            <th bgcolor="#BBBBBB">LDAP DN</th>
+            <th bgcolor="#BBBBBB">{t}Status{/t}</th>
+            <th bgcolor="#BBBBBB">{t}User Id{/t}</th>
+            <th bgcolor="#BBBBBB">{t}Fullname{/t}</th>
+            <th bgcolor="#BBBBBB">{t}New Password{/t}</th>
+            <th bgcolor="#BBBBBB">{t}LDAP DN{/t}</th>
         </tr>
 {foreach from=$accounts item=account key=key}
         <tr>

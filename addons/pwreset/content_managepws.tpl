@@ -131,9 +131,9 @@
         <tr>
         <td style="text-align: center; vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
 {if $accounts[$key]['status']==="ok"}
-            <b color="green">{t}ok{/t}</b>
+            <b style="color:green;">{t}ok{/t}</b>
 {elseif $accounts[$key]['status']==="failed"}
-            <b color="red">{t}failed{/t}</b>
+            <b style="color:red;">{t}failed{/t}</b>
 {elseif $accounts[$key]['status']==="skipped"}
             <i>{t}skipped{/t}</i>
 {elseif $accounts[$key]['status']==="ignored"}

@@ -169,6 +169,9 @@
         <input type="hidden" name="phase_00">
         <input name="btn_pwreset_back" value="{t}Back{/t}" type ="submit">
         {/if}
+        {else}
+        <input type="hidden" name="phase_00">
+        <input name="btn_pwreset_restart" value="{t}Restart Password Manager{/t}" type ="submit">
         {/if}
 </div>
 

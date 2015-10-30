@@ -96,7 +96,7 @@
             {$accounts[$key]['cn']}
         </td>
         <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
-            <input style="font-family:monospace;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if (!$accounts[$key]['valid'])}disabled{/if} type="text" value="{$accounts[$key]['userPassword']}">
+            <input style="font-family:monospace;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if (!$accounts[$key]['valid'])}disabled{/if} type="text" value="{$accounts[$key]['userPassword']}" name='password_{$key}' id='password_{$key}'>
         </td>
         <td style="vertical-align:middle;" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
             {$accounts[$key]['dn']}

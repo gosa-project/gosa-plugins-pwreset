@@ -323,12 +323,22 @@ class managepws extends plugin
         elseif (isset ($_POST['phase_02'])) {
 
             $smarty->assign ("pwreset_configured",TRUE);
+
+            /* handle accounts being marked for being skipping */
             if(isset($_POST['accounts'])) {
                 foreach($this->accounts as $key => $account) {
                     $this->accounts[$key]['checked'] = FALSE;
                 }
                 foreach($_POST['accounts'] as $cnt => $key) {
                     $this->accounts[$key]['checked'] = TRUE;
+                }
+            }
+
+            /* handle on-screen modifications of user passwords */
+            foreach($_POST as $key => $val) {
+                if (preg_match('/^password_([0-9]+)/', $key)) {
+                    $idx= preg_replace('/^password_([0-9]+)/', '${1}', $key);
+                    $this->accounts[$idx]['userPassword']= $val;
                 }
             }
 

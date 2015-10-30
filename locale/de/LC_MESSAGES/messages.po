@@ -32,8 +32,8 @@ msgid ""
 "With the GOsa2 Password Management Add-On you can mass reset user passwords "
 "in various ways."
 msgstr ""
-"Mit dem GOsa² Kennwortverwaltungs-Addon bietet verschiendene Möglichkeiten "
-"viele Benutzerkennwörter zugleich zurückzusetzen."
+"Das GOsa² Kennwortverwaltungs-Addon bietet verschiendene Möglichkeiten "
+"mehrere Benutzerkennwörter in einem Arbeitsschritt zurückzusetzen."
 
 #: addons/pwreset/content_managepws.tpl:8
 msgid "Configure password reset options"
@@ -42,16 +42,16 @@ msgstr "Optionen der Kennwortverwaltung konfigurieren"
 #: addons/pwreset/content_managepws.tpl:11
 msgid "Please configure options for this run of resetting user credentials."
 msgstr ""
-"Bitte die Optionen für diesen Lauf der Benutzerkennwortrücksetzung "
+"Bitte die Optionen für diesen Lauf der Kennwortrücksetzung "
 "konfigurieren."
 
 #: addons/pwreset/content_managepws.tpl:15
 msgid "Configure planned password reset operations"
-msgstr "Geplante Kennwortrücksetzungsoperationen konfigurieren"
+msgstr "Geplante Kennwortrücksetzungen konfigurieren"
 
 #: addons/pwreset/content_managepws.tpl:19
 msgid "Upload a credentials file (CSV format)."
-msgstr "EIne Datei mit Zugangsdaten hochladen (CSV-Format)."
+msgstr "Eine Datei mit Zugangsdaten hochladen (CSV-Format)."
 
 #: addons/pwreset/content_managepws.tpl:24
 msgid "File format:"
@@ -63,7 +63,7 @@ msgstr "CSV, Komma-separierte Felder, keine Anführungszeichen, zwei Spalten:"
 
 #: addons/pwreset/content_managepws.tpl:28
 msgid "Select CSV file for uploading:"
-msgstr "CSV-Datei für Upload auswählen"
+msgstr "CSV-Datei für Upload auswählen:"
 
 #: addons/pwreset/content_managepws.tpl:32
 msgid "Browse"
@@ -94,13 +94,13 @@ msgid ""
 "Please review outstanding password reset operations. If individual users "
 "should be skipped from this password reset operation, deselect them below."
 msgstr ""
-"Bitte ausstehende Kennwortrücksetzungsoperationen überprüfen. Falls einzelne "
+"Bitte ausstehende Kennwortrücksetzungen überprüfen. Falls einzelne "
 "Benutzer von der Kennwortrücksetzung ausgenommen werden sollen, können "
-"weiter unten demarkiert werden."
+"diese weiter unten demarkiert werden."
 
 #: addons/pwreset/content_managepws.tpl:79
 msgid "Review planned password reset operations"
-msgstr "Geplante Kennwortrücksetzungsoperationen prüfen"
+msgstr "Geplante Kennwortrücksetzungen prüfen"
 
 #: addons/pwreset/content_managepws.tpl:109
 msgid "No accounts have been found in this part of the LDAP tree."
@@ -119,8 +119,8 @@ msgid ""
 "application (e.g., LibreOffice Calc)."
 msgstr ""
 "Weiter unten befindet sich ein Statusbericht für die einzelnen "
-"Kennwortrücksetzungsoperationen. Die Tabelle mit Zugangsdaten kann mittels "
-"Kopieren und Einfügen in eine Tabellenkalkulation übertragen werden (z.Bsp. "
+"Kennwortrücksetzungen. Die Tabelle mit Zugangsdaten kann mittels "
+"Kopieren-und-Einfügen in eine Tabellenkalkulation übertragen werden (z.Bsp. "
 "LibreOffice Calc)."
 
 #: addons/pwreset/content_managepws.tpl:122
@@ -204,7 +204,7 @@ msgstr "Datei ist nicht lesbar"
 
 #: addons/pwreset/class_managepws.inc:215
 msgid "File has an unsupported encoding!"
-msgstr "Datei hat eine nicht unterstützte Enkodierung!"
+msgstr "Die Enkodierung der Datei wird nicht unterstützt!"
 
 #: addons/pwreset/class_managepws.inc:237
 msgid "not set"
@@ -241,6 +241,3 @@ msgstr "Es wurde keine CSV-Datei für den Upload ausgewählt!"
 #: addons/pwreset/class_managepws.inc:301
 msgid "In this part of the LDAP tree no user accounts could be found!"
 msgstr "In diesem Teil des LDAP-Baums konnten keine Benutzer gefunden werden!"
-
-#~ msgid "GOsa2 Password Management Add-On has not been implemented, yet."
-#~ msgstr "GOsa² Add-On zur Kennwortverwaltung wurde noch nicht implementiert."

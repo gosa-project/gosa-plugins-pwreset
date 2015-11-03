@@ -1,6 +1,43 @@
-2015-10-30 13:39:39 +0100 Mike Gabriel (c9b7b7f)
+2015-11-03 16:18:49 +0100 Mike Gabriel (803e8e9)
 
-	* release 0.99.1 (HEAD, master)
+	* release 0.99.2 (HEAD, master)
+
+2015-10-30 18:54:06 +0100 Mike Gabriel (5507a34)
+
+	* (Now really) Add AUTHORS.txt file. (origin/master, gh/master)
+
+2015-10-30 18:54:06 +0100 Mike Gabriel (b31bf3f)
+
+	* Add AUTHORS.txt file and reference it in README.md.
+
+2015-10-30 18:22:39 +0100 Mike Gabriel (5db3499)
+
+	* README.md: Drop Description: form headline.
+
+2015-10-30 18:21:50 +0100 Mike Gabriel (60aa4b7)
+
+	* README.md: Fix markdown for headline.
+
+2015-10-30 18:20:22 +0100 Mike Gabriel (a31ca7d)
+
+	* README.gosa-compat: Use English date string.
+
+2015-10-30 18:15:23 +0100 Mike Gabriel (94450cc)
+
+	* README.md: Make Github happy and provide a README.md file.
+
+2015-10-30 14:06:38 +0100 Mike Gabriel (08794ca)
+
+	* Make tab name ('Reset Passwords') translatable. Update i18n files
+          accordingly.
+
+2015-10-30 13:56:18 +0100 Mike Gabriel (9f84219)
+
+	* de.po fix: Add-On -> Addon.
+
+2015-10-30 13:39:39 +0100 Mike Gabriel (bd7eaea)
+
+	* release 0.99.1 (tag: 0.99.1)
 
 2015-10-30 13:39:02 +0100 Mike Gabriel (f8642e0)
 
@@ -8,8 +45,7 @@
 
 2015-10-30 13:05:23 +0100 Mike Gabriel (e6d43f0)
 
-	* update i18n files (now with translated table heads) (origin/master,
-          gh/master)
+	* update i18n files (now with translated table heads)
 
 2015-10-30 13:05:07 +0100 Mike Gabriel (364128b)
 

@@ -31,7 +31,7 @@ class pwreset extends plugin
     var $objectclasses= array();
     var $pwreset;
 
-    function pwreset (&$config)
+    function __construct(&$config)
     {
         $this->initTime = microtime(TRUE);
 

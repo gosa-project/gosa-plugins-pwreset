@@ -34,7 +34,7 @@ class managepws extends plugin
     var $objectclasses= array();
     var $view_logged = FALSE;
 
-    function managepws (&$config, $dn= NULL)
+    function __construct(&$config, $dn= NULL)
     {
         $this->initTime = microtime(TRUE);
 

@@ -22,7 +22,7 @@
 class pwresettab extends tabs
 {
 
-  function pwresettab($config, $data, $dn)
+  function __construct($config, $data, $dn)
   {
     tabs::tabs($config, $data, $dn);
   }

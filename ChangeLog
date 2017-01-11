@@ -1,6 +1,18 @@
-2017-01-11 20:13:10 +0100 Mike Gabriel (5621c85)
+2017-01-11 20:43:58 +0100 Mike Gabriel (fe843d2)
 
-	* release 0.99.3 (HEAD, master)
+	* release 0.99.4 (HEAD, master)
+
+2017-01-11 20:43:38 +0100 Mike Gabriel (e0f391a)
+
+	* pwreset.png: Fix PNG icon size (was: 18px, should be 48px).
+
+2017-01-11 20:24:24 +0100 Mike Gabriel (ac9b4b2)
+
+	* README.icon: Fix Marcel's mail address. (origin/master)
+
+2017-01-11 20:13:10 +0100 Mike Gabriel (39b1e32)
+
+	* release 0.99.3 (tag: 0.99.3)
 
 2017-01-11 20:12:36 +0100 Mike Gabriel (93f6021)
 
@@ -15,7 +27,6 @@
 2016-06-01 16:41:58 +0200 Mike Gabriel (120f966)
 
 	* PHP7: use __construct() method names for class constructors.
-          (origin/master, gh/master)
 
 2015-11-03 16:18:49 +0100 Mike Gabriel (13bebda)
 

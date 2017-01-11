@@ -1,10 +1,29 @@
-2015-11-03 16:18:49 +0100 Mike Gabriel (803e8e9)
+2017-01-11 20:13:10 +0100 Mike Gabriel (5621c85)
 
-	* release 0.99.2 (HEAD, master)
+	* release 0.99.3 (HEAD, master)
+
+2017-01-11 20:12:36 +0100 Mike Gabriel (93f6021)
+
+	* COPYING.CC-BY-SA-3.0: Add plain license text of the CC-BY-SA-3.0
+          license.
+
+2017-01-11 20:06:30 +0100 Mike Gabriel (86d6262)
+
+	* GOsa plugin PWReset: Logo/Icon contributed by Marcel Sandow, many
+          thanks for that!!!
+
+2016-06-01 16:41:58 +0200 Mike Gabriel (120f966)
+
+	* PHP7: use __construct() method names for class constructors.
+          (origin/master, gh/master)
+
+2015-11-03 16:18:49 +0100 Mike Gabriel (13bebda)
+
+	* release 0.99.2 (tag: 0.99.2)
 
 2015-10-30 18:54:06 +0100 Mike Gabriel (5507a34)
 
-	* (Now really) Add AUTHORS.txt file. (origin/master, gh/master)
+	* (Now really) Add AUTHORS.txt file.
 
 2015-10-30 18:54:06 +0100 Mike Gabriel (b31bf3f)
 

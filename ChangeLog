@@ -1,6 +1,14 @@
-2017-01-11 20:43:58 +0100 Mike Gabriel (fe843d2)
+2018-01-10 10:56:35 +0100 Mike Gabriel (5096605)
 
-	* release 0.99.4 (HEAD, master)
+	* release 0.99.5 (HEAD -> master)
+
+2017-11-28 10:23:23 +0100 bzapiec (314da53)
+
+	* fix deprecated constructor call (origin/master)
+
+2017-01-11 20:43:58 +0100 Mike Gabriel (fa47fbb)
+
+	* release 0.99.4 (tag: 0.99.4)
 
 2017-01-11 20:43:38 +0100 Mike Gabriel (e0f391a)
 
@@ -8,7 +16,7 @@
 
 2017-01-11 20:24:24 +0100 Mike Gabriel (ac9b4b2)
 
-	* README.icon: Fix Marcel's mail address. (origin/master)
+	* README.icon: Fix Marcel's mail address.
 
 2017-01-11 20:13:10 +0100 Mike Gabriel (39b1e32)
 

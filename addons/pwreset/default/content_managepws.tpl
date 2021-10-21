@@ -1,26 +1,28 @@
-<div class="pwreset-wrapper">
-    <i class="material-icons right" title="{t escape=no}With the GOsa2 Password Management Add-On you can mass reset user passwords in various ways.{/t}">info</i>
+<div class="pwreset-wrapper card-content-scroll">
     <div class="row">
         {if $pwreset_configured != TRUE}
         <input type="hidden" name="phase_01">
-        
-        <h2>{t}Configure password reset options{/t}</h2>
+
+        <h2>{t}Configure password reset options{/t}
+        <i class="material-icons tooltipped" data-tooltip="{t escape=no}With the GOsa2 Password Management Add-On you can mass reset user passwords in various ways.{/t}">info_outline</i></h2>
         <p>{t}Please configure options for this run of resetting user credentials.{/t}</p>
-        
+
         <hr class="divider">
-        
+
         <div class="col s12 xl6">
             <label>
-                <input {if $preset_pwreset_mode==0} checked {/if} type='radio' name='pwreset_mode' value='0'>
-                <span>{t}Upload a credentials file (CSV format).{/t}</span>
+                <p>
+                    <input {if $preset_pwreset_mode==0} checked {/if} type='radio' name='pwreset_mode' value='0'>
+                    <span>{t}Upload a credentials file (CSV format).{/t}</span>
+                </p>
             </label>
-            
+
             <div class="example-wrapper">
                 <b>{t}File format:{/t}</b> {t}CSV, comma-separated, no quotes, two columns:{/t}
                 <pre class="center-align">&lt;uid&gt;,&lt;userPassword&gt;</pre>
             </div>
-            
-            
+
+
             <div class="file-field input-field">
                 <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
                 <div class="btn-small">
@@ -35,8 +37,10 @@
 
         <div class="col s12 xl6">
             <label>
-                <input {if $preset_pwreset_mode==1} checked {/if} type='radio' name='pwreset_mode' value='1'>
-                <span>{t}Reset passwords of accounts in a certain organizational unit of the LDAP tree.{/t}</span>
+                <p>
+                    <input {if $preset_pwreset_mode==1} checked {/if} type='radio' name='pwreset_mode' value='1'>
+                    <span>{t}Reset passwords of accounts in a certain organizational unit of the LDAP tree.{/t}</span>
+                </p>
             </label>
 
             <div class="input-field">
@@ -53,8 +57,8 @@
                 <label for="pwlength">{t}Length of auto-generated passwords:{/t}</label>
             </div>
         </div>
-        
-        
+
+
         {elseif $pwreset_reviewed != TRUE}
         <input type="hidden" name="phase_02">
 
@@ -66,7 +70,7 @@
         <hr class="divider">
 
         <div class="col s12 xl12">
-            <table class="striped">
+            <table id="managepw-table" class="striped">
                 <thead>
                     <tr>
                         <th>{t}Really?{/t}</th>
@@ -81,8 +85,10 @@
                     <tr>
                         <td>
                             <label>
-                                <input value="{$key}" {if $accounts[$key]['checked'] && $accounts[$key]['valid']}checked{/if} {if (!$accounts[$key]['valid'])}disabled{/if} type='checkbox' name='accounts[]' id='account_{$key}'>
-                                <span></span>
+                                <p>
+                                    <input value="{$key}" {if $accounts[$key]['checked'] && $accounts[$key]['valid']}checked{/if} {if (!$accounts[$key]['valid'])}disabled{/if} type='checkbox' name='accounts[]' id='account_{$key}'>
+                                    <span></span>
+                                </p>
                             </label>
                         </td>
                         <td>
@@ -92,7 +98,9 @@
                             {$accounts[$key]['cn']}
                         </td>
                         <td>
-                            <input style="font-family:monospace;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if (!$accounts[$key]['valid'])}disabled{/if} type="text" value="{$accounts[$key]['userPassword']}" name='password_{$key}' id='password_{$key}'>
+                            <div class="input-field">
+                                <input {if (!$accounts[$key]['valid'])}style="color:#A0A0A0;"{/if} {if (!$accounts[$key]['valid'])}disabled{/if} type="text" value="{$accounts[$key]['userPassword']}" name='password_{$key}' id='password_{$key}'>
+                            </div>
                         </td>
                         <td>
                             {$accounts[$key]['dn']}
@@ -109,12 +117,12 @@
         </div>
         {else}
         <h2>{t}Password reset operations have been accomplished{/t}</h2>
-        
+
         <p>{t}Below you find a status report for this password reset operation. You can copy'n'paste the credentials table below into your favourite spreadsheet application (e.g., LibreOffice Calc).{/t}</p>
-        
+
         <hr class="divider">
         <div class="col s12 s6">
-            <table class="striped">
+            <table id="managepw-table" class="striped">
                 <thead>
                     <tr>
                         <th>{t}Status{/t}</th>

@@ -207,7 +207,7 @@ class managepws extends plugin
                         {
                             if(mb_check_encoding($raw_csv_data, "iso-8859-1"))
                             {
-                                $raw_csv_data = utf8_encode($raw_csv_data);
+                                $raw_csv_data = mb_convert_encoding($raw_csv_data, 'UTF-8', 'ISO-8859-1');
                             } else
                             {
                                 $smarty->assign ("LDIFError",TRUE);

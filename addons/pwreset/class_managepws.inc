@@ -94,7 +94,7 @@ class managepws extends plugin
             if (isset ($_POST['pwreset_configured'])||isset ($_POST['pwreset_reviewed'])) {
                 msg_dialog::display (_ ("Permission error"),_ ("You have no permission to reset passwords!"),ERROR_DIALOG);
             }
-            return ($smarty->fetch (get_template_path ('content_pwreset.tpl',TRUE)));
+            return ($smarty->fetch (get_template_path ('content_pwmanage.tpl',TRUE)));
         }
 
         $this->ou_tree = array();

@@ -91,6 +91,7 @@
         </td>
         <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
             {$accounts[$key]['uid']}
+            <input type=hidden value="{$accounts[$key]['uid']}" name='uid_{$key}' id='uid_{$key}'>
         </td>
         <td style="vertical-align:middle;{if (!$accounts[$key]['valid'])}color:#A0A0A0;{/if}" {if $key % 2 == 1}bgcolor="#E0E0E0"{/if}>
             {$accounts[$key]['cn']}

@@ -34,6 +34,8 @@ class managepws extends plugin
     var $objectclasses= array();
     var $view_logged = FALSE;
 
+    var $accounts= array();
+
     function __construct(&$config, $dn= NULL)
     {
         $this->initTime = microtime(TRUE);
@@ -324,6 +326,24 @@ class managepws extends plugin
 
             $smarty->assign ("pwreset_configured",TRUE);
 
+            $this->accounts= array();
+
+            /* Pick up on-screen modifications of user passwords
+             * and retrieve user list from _POST request, too.
+             */
+            foreach($_POST as $key => $val) {
+                if (preg_match('/^password_([0-9]+)/', $key)) {
+                    $idx= preg_replace('/^password_([0-9]+)/', '${1}', $key);
+                    $this->accounts[$idx]['userPassword']= $val;
+                }
+                if (preg_match('/^uid_([0-9]+)/', $key)) {
+                    $idx= preg_replace('/^uid_([0-9]+)/', '${1}', $key);
+                    $this->accounts[$idx]['uid']= $val;
+                }
+            }
+
+            asort($this->accounts);
+
             /* handle accounts being marked for being skipping */
             if(isset($_POST['accounts'])) {
                 foreach($this->accounts as $key => $account) {
@@ -334,18 +354,26 @@ class managepws extends plugin
                 }
             }
 
-            /* handle on-screen modifications of user passwords */
-            foreach($_POST as $key => $val) {
-                if (preg_match('/^password_([0-9]+)/', $key)) {
-                    $idx= preg_replace('/^password_([0-9]+)/', '${1}', $key);
-                    $this->accounts[$idx]['userPassword']= $val;
-                }
-            }
-
             foreach($this->accounts as $key => $account) {
-                if($account['valid'] && $account['checked']) {
 
-                    if(!change_password($account['dn'],$account['userPassword'],FALSE,'','', $message)) {
+                // Recheck if account is still valid in LDAP
+                $this->_ldap->cd($this->config->current['BASE']);
+                $_ldapsearch = $this->_ldap->search("(uid=".$account['uid'].")",array("dn","cn"));
+                $ldap_object = $this->_ldap->fetch($_ldapsearch);
+                if(isset($ldap_object['cn'][0])) {
+                    $this->accounts[$key]['cn'] = $ldap_object['cn'][0];
+                }
+                else {
+                    $this->accounts[$key]['cn'] = _('not set');
+                }
+                if(isset($ldap_object['dn'])) {
+                    $this->accounts[$key]['dn'] = $ldap_object['dn'];
+                    $this->accounts[$key]['valid'] = TRUE;
+                }
+
+                if($this->accounts[$key]['valid'] && $this->accounts[$key]['checked']) {
+
+                    if(!change_password($this->accounts[$key]['dn'],$this->accounts[$key]['userPassword'],FALSE,'','', $message)) {
                         msg_dialog::displayChecks(array($message));
                         $this->accounts[$key]['status'] = "failed";
                     }

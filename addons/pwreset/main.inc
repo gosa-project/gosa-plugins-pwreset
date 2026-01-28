@@ -33,7 +33,7 @@ if ( $cleanup ){
   session::un_set('pwreset');
 }else{
 
-	/* Create phonelist object on demand */
+	/* Create pwreset object on demand */
 	if (!session::is_set('pwreset')){
 		$pwreset= new pwreset ($config);
 		$pwreset->set_acl_category("pwreset");

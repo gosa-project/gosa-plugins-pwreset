@@ -51,7 +51,7 @@ class managepws extends plugin
         /* columns in pw reset CSV */
         $attrs= array ();
 
-	/* passwords can be reset for uid DN objects or cn DN objects */
+        /* passwords can be reset for uid DN objects or cn DN objects */
         $attrs[0]= "uid";
         $attrs[1]= "cn";
         $attrs[2]= "userPassword";

@@ -93,6 +93,7 @@
                         </td>
                         <td>
                             {$accounts[$key]['uid']}
+                            <input type=hidden value="{$accounts[$key]['uid']}" name='uid_{$key}' id='uid_{$key}'>
                         </td>
                         <td>
                             {$accounts[$key]['cn']}
